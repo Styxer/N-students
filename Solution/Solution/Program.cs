@@ -9,7 +9,6 @@ namespace Solution
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
 
             var students = new List<string> { "Eden", "Refael", "Yoni", "Nitzan", "Hadas" };
 
@@ -28,15 +27,25 @@ namespace Solution
             }
         }
 
-     
+
 
         static IEnumerable<(string Student, int Attendances)> TopStudents(IEnumerable<string> students
             , IEnumerable<IEnumerable<string>> attendees,
              int n)
-                => attendees.SelectMany(lecture => lecture.Distinct().Intersect(students)) 
+        {
+            if (students?.Count() > 0 && attendees?.Count() > 0 && n >= 0)
+            {
+                if (n > students.Count())
+                    n = students.Count();
+
+                return attendees.SelectMany(lecture => lecture.Distinct().Intersect(students)) // remove non students and duplicates attendees
                             .GroupBy(x => x)
-                            .Select(x => (Student : x.First(), Attendances: x.Count()))
-                            .OrderByDescending(x => x.Attendances)
-                            .Take(n);
+                            .Select(x => (Student: x.First(), Attendances: x.Count())) //grouping back the result
+                            .OrderByDescending(x => x.Attendances) //ordering them from high to low by the number of times they showed
+                            .Take(n); //returning the first highest N
+            }
+            else
+                return null;
+        }
     }
 }
