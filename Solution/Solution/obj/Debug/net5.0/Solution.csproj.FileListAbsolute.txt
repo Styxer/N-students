@@ -13,3 +13,4 @@ C:\Users\ofir_roz\source\repos\N-students\Solution\Solution\obj\Debug\net5.0\Sol
 C:\Users\ofir_roz\source\repos\N-students\Solution\Solution\obj\Debug\net5.0\ref\Solution.dll
 C:\Users\ofir_roz\source\repos\N-students\Solution\Solution\obj\Debug\net5.0\Solution.pdb
 C:\Users\ofir_roz\source\repos\N-students\Solution\Solution\obj\Debug\net5.0\Solution.genruntimeconfig.cache
+C:\Users\ofir_roz\source\repos\N-students\Solution\Solution\obj\Debug\net5.0\Solution.csproj.AssemblyReference.cache

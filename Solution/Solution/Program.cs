@@ -22,36 +22,21 @@ namespace Solution
 
             };
 
-            TopStudents(students, attendess, 5);
+            foreach (var entry in TopStudents(students, attendess, 3))
+            {
+                Console.WriteLine($"{entry.Key}: {entry.Value}");
+            }
         }
 
-        static void TopStudents(IEnumerable<string> student, IEnumerable<IEnumerable<string>> attendees, int n)
-        {
-            var dic = new Dictionary<string,int>();
-            foreach (var attendee in attendees)
-            {
-                var aa = attendee.Distinct().Intersect(student);
-                for (int i = 0; i < aa.Count(); i++)
-                {
-                    var item = aa.ElementAt(i);
-                    if (dic.TryGetValue(item, out int count))
-                    {
-                        dic[item] = count + 1;
-                    }
-                    else
-                    {
-                        dic.Add(item, 1);
-                    }
-                }     
-               
-            }
+     
 
-            foreach (var item in dic)
-            {
-                Console.WriteLine(item.Key + " " + item.Value);
-            }
-
-            Console.Read();
-        }
+        static IEnumerable<KeyValuePair<string, int>> TopStudents(IEnumerable<string> students
+            , IEnumerable<IEnumerable<string>> attendees,
+             int n)
+                => attendees.SelectMany(lecture => lecture.Distinct().Intersect(students))
+                            .GroupBy(x => x)
+                            .Select(x => KeyValuePair.Create(x.First(), x.Count()))
+                            .OrderByDescending(x => x.Value)
+                            .Take(n);
     }
 }
