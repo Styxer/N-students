@@ -24,19 +24,19 @@ namespace Solution
 
             foreach (var entry in TopStudents(students, attendess, 3))
             {
-                Console.WriteLine($"{entry.Key}: {entry.Value}");
+                Console.WriteLine($"{entry.Student}: {entry.Attendances}");
             }
         }
 
      
 
-        static IEnumerable<KeyValuePair<string, int>> TopStudents(IEnumerable<string> students
+        static IEnumerable<(string Student, int Attendances)> TopStudents(IEnumerable<string> students
             , IEnumerable<IEnumerable<string>> attendees,
              int n)
-                => attendees.SelectMany(lecture => lecture.Distinct().Intersect(students))
+                => attendees.SelectMany(lecture => lecture.Distinct().Intersect(students)) 
                             .GroupBy(x => x)
-                            .Select(x => KeyValuePair.Create(x.First(), x.Count()))
-                            .OrderByDescending(x => x.Value)
+                            .Select(x => (Student : x.First(), Attendances: x.Count()))
+                            .OrderByDescending(x => x.Attendances)
                             .Take(n);
     }
 }
