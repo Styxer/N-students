@@ -1,0 +1,15 @@
+C:\Users\ofir_roz\source\repos\N-students\Solution\Solution\obj\Debug\net5.0\Solution.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ofir_roz\source\repos\N-students\Solution\Solution\obj\Debug\net5.0\Solution.AssemblyInfoInputs.cache
+C:\Users\ofir_roz\source\repos\N-students\Solution\Solution\obj\Debug\net5.0\Solution.AssemblyInfo.cs
+C:\Users\ofir_roz\source\repos\N-students\Solution\Solution\obj\Debug\net5.0\Solution.csproj.CoreCompileInputs.cache
+C:\Users\ofir_roz\source\repos\N-students\Solution\Solution\bin\Debug\net5.0\Solution.exe
+C:\Users\ofir_roz\source\repos\N-students\Solution\Solution\bin\Debug\net5.0\Solution.deps.json
+C:\Users\ofir_roz\source\repos\N-students\Solution\Solution\bin\Debug\net5.0\Solution.runtimeconfig.json
+C:\Users\ofir_roz\source\repos\N-students\Solution\Solution\bin\Debug\net5.0\Solution.runtimeconfig.dev.json
+C:\Users\ofir_roz\source\repos\N-students\Solution\Solution\bin\Debug\net5.0\Solution.dll
+C:\Users\ofir_roz\source\repos\N-students\Solution\Solution\bin\Debug\net5.0\ref\Solution.dll
+C:\Users\ofir_roz\source\repos\N-students\Solution\Solution\bin\Debug\net5.0\Solution.pdb
+C:\Users\ofir_roz\source\repos\N-students\Solution\Solution\obj\Debug\net5.0\Solution.dll
+C:\Users\ofir_roz\source\repos\N-students\Solution\Solution\obj\Debug\net5.0\ref\Solution.dll
+C:\Users\ofir_roz\source\repos\N-students\Solution\Solution\obj\Debug\net5.0\Solution.pdb
+C:\Users\ofir_roz\source\repos\N-students\Solution\Solution\obj\Debug\net5.0\Solution.genruntimeconfig.cache
